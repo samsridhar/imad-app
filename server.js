@@ -52,8 +52,8 @@ function createTemplate (data){
     var heading = data.heading;
     var date = data.date;
     var content = data.content;
-    var htmlTemplate = 
-   ` <html>
+    var htmlTemplate = `
+   <html>
   <head>
     <title>
         ${title}
@@ -78,7 +78,8 @@ function createTemplate (data){
              
    </div>
   </body>
-  </html> `;
+  </html> 
+  `;
     return htmlTemplate;
 }
 
@@ -97,7 +98,7 @@ app.get('/ui/madi.png', function (req, res) {
 
 app.get('/:articleName', function(req, res){
     var articleName = req.params.articleName;
-    res.sendFile(createTemplate(articles[articleName]));
+    res.send(createTemplate(articles[articleName]));
 });
 
 
