@@ -10,7 +10,7 @@ function rightmove(){
     marginLeft = marginLeft+1;
     img.style.marginLeft =marginLeft + 'px';
 }
-var img = document.getElementById('mady');
+var img = document.getElementById('madi');
 
 img.onclick = function(){
     var interval = setInterval(rightmove, 50);
