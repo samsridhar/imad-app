@@ -12,6 +12,6 @@ window.onload = function(){
     //Render the variable in a correct span
     var counter = 0;
      counter = counter + 1;
-    document.getElementById('count').innerHtml = counter.toString();
+    document.getElementById('count').innerHTML = counter.toString();
 };
 };
