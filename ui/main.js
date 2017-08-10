@@ -1,7 +1,7 @@
 console.log('Loaded!');
-var element = document.getElementById('main-text');
+var element = document.getElementById('s');
 
-element.innerHtml = 'RAJINIKANTH';
+element.innerHtml = 'hi hello how are you fans';
 
 
 
