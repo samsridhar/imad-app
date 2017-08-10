@@ -1,7 +1,7 @@
 //counter code
 
 
-
+var counter = 0;
 
 window.onload = function(){
     document.getElementById('counter').onclick = function(){
@@ -10,7 +10,7 @@ window.onload = function(){
     //capture the response and store in variable
     
     //Render the variable in a correct span
-    var counter = 0;
+    
      counter = counter + 1;
     document.getElementById('count').innerHTML = counter.toString();
 };
