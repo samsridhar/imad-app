@@ -1,6 +1,7 @@
 console.log('Loaded!');
 
-
+var element = document.getElementById("sam");
+element.innerHtml = "changed";
 
 
 var img = document.getElementById('madi');
