@@ -19,11 +19,10 @@ body {
 .img-medium {
     height: 200px;
 }
-
-
-      .container{
+.container {
               font-family: sans-serif;
               padding-top: 2px;
               padding-left: 50px;
               padding-right: 50px;
-       }
+    
+}
