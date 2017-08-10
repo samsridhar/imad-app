@@ -1,7 +1,5 @@
 console.log('Loaded!');
 
-document.getElementById("sam").innerHtml = "kabali Dawwww.......nerupur dawwwww nerungu dawwwww...";
-
 
 var img = document.getElementById('madi');
 var marginLeft =0;
