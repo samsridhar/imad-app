@@ -1,7 +1,5 @@
 console.log('Loaded!');
-var element = document.getElementById('s');
 
-element.innerHtml = 'hi hello how are you fans';
 
 
 
