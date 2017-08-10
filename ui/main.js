@@ -1,7 +1,6 @@
 console.log('Loaded!');
 
-var element = document.getElementById("sam");
-element.innerHtml = "kabali Dawwww.......nerupur dawwwww nerungu dawwwww...";
+document.getElementById("sam").innerHtml = "kabali Dawwww.......nerupur dawwwww nerungu dawwwww...";
 
 
 var img = document.getElementById('madi');
