@@ -62,4 +62,3 @@ ul.innerHTML = list;
 
       
       
-};
