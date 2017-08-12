@@ -6,6 +6,7 @@ document.getElementById('click').onclick = function(){
  //capture the response and store it in a variable
  
 request.onreadystatechange = function(){
+    console.log("i am in");
  if(request.readystate === XMLHttpRequest.DONE){
      //Take some action
      console.log("i am in");
