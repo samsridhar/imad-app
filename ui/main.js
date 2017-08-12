@@ -8,7 +8,7 @@ document.getElementById('click').onclick = function(){
 request.onreadystatechange = function(){
  if(request.readystate === XMLHttpRequest.DONE){
      //Take some action
-     console.log("req response "+request.responseText);
+     console.log("i am in");
      if(request.status === 200){
          var counter = request.responseText;
          console.log(counter);
