@@ -10,6 +10,7 @@ request.onreadystatechange = function(){
      //Take some action
      if(request.status === 200){
          var counter = request.responseText;
+         console.log(counter);
          document.getElementById('count').innerHTML = counter.toString();
      }
      
