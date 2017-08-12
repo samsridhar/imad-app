@@ -6,9 +6,9 @@ document.getElementById('click').onclick = function(){
  //capture the response and store it in a variable
  
 request.onreadystatechange = function(){
-    console.log("count value is "+document.getElementById("count").value);
  if(request.readystate === XMLHttpRequest.DONE){
      //Take some action
+     console.log("req response "+request.responseText);
      if(request.status === 200){
          var counter = request.responseText;
          console.log(counter);
