@@ -7,7 +7,7 @@ document.getElementById('click').onclick = function(){
  
 request.onreadystatechange = function(){
     console.log("i am in");
- if(request.readystate === XMLHttpRequest.DONE){
+ if(request.readyState === XMLHttpRequest.DONE){
      //Take some action
      console.log("i am in");
      if(request.status === 200){
