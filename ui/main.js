@@ -1,17 +1,29 @@
 //counter code
+var button = document.getElementById('counter');
 
 
-var counter = 0;
 
-window.onload = function(){
-    document.getElementById('counter').onclick = function(){
-    //  Make a request to the counter end point
-    
-    //capture the response and store in variable
-    
-    //Render the variable in a correct span
-    
-     counter = counter + 1;
-    document.getElementById('count').innerHTML = counter.toString();
+
+
+button.onclick = function(){
+  //create a request
+ var request = new XMLHttpRequest();  
+ 
+ //capture the response and store it in a variable
+ 
+request.onreadystatechange = function(){
+ if(request.readystate === XMLHttpRequest.DONE){
+     //Take some action
+     if(request.status === 200){
+         var counter = request.responseText;
+         document.getElementById('count').innerHTML = counter.toString();
+     }
+     
+ }
+    //NOT done YET
 };
+     //Make a  request to the counter Endpoint
+    request.open('GET','http://samsridharmac.imad.hasura-app.io/counter',true);
+    request.send(null);
 };
+
