@@ -16,48 +16,6 @@ var config = {
     
 }; 
 
-var articles = {
-    'article-one':{
-        title: 'article-one',
-        heading: 'article-one',
-        date: 'sep 27,2017',
-        content: `<p>
-                 hi hello everybody welcome to spaceship.
-                 hi hello everybody welcome to spaceship.
-                 </p>
-               <p>
-                  hi hello everybody welcome to spaceship.
-                  hi hello everybody welcome to spaceship
-                  </p>`
-    },
-    'article-two':{
-         title: 'article-two',
-         heading: 'article-two',
-         date: 'sep 28,2017',
-         content: `<p>
-                 hi hello everybody welcome to spaceship on 28.
-                 hi hello everybody welcome to spaceship on 28.
-                 </p>
-               <p>
-                  hi hello everybody welcome to spaceship.
-                  hi hello everybody welcome to spaceship
-                  </p>`
-    },
-    'article-three':{
-         title: 'article-three',
-         heading: 'article-three',
-         date: 'sep 29,2017',
-         content: `<p>
-                 hi hello everybody welcome to spaceship 17.
-                 hi hello everybody welcome to spaceship 17.
-                 </p>
-               <p>
-                  hi hello everybody welcome to spaceship.
-                  hi hello everybody welcome to spaceship
-                  </p>`
-    }
-};
-
 function createTemplate (data){
     var title = data.title;
     var heading = data.heading;
