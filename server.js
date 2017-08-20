@@ -159,10 +159,12 @@ pool.query("SELECT * FROM article WHERE title = '"+req.params.articleName + "'",
             res.send(createTemplate(articleData));
         }
     }
-});    
-    var articleName = req.params.articleName;
-    res.send(createTemplate(articles[articleName]));
+
 });
+});
+
+
+
 
 
 // Do not change port, otherwise your app won't run on IMAD servers
