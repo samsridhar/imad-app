@@ -91,6 +91,32 @@ app.post('/create-user', function(req, res){
     });
 });
 
+app.post('/login', function(req, res){
+    var username = req.body.username;
+    var password = req.body.password;
+    
+    pool.query('SELECT * from "user" WHERE username=$1', [username], function(err, result){
+        if(err){
+            res.status(500).send(err.toString());
+        } else{
+            if(resul.rows.length === 0){
+                res.send(403).send('Username/password is invalid');
+            } else{
+                //Match the password
+                var dbString = result.rows[0].password;
+                var salt = dbString.Split('$')[2];
+                var hashedpassword = hash(password,salt); //creating a hash based on the password submitted and the Original salt
+                if (hashedpassword === dbString){
+                    res.send('Credentials correct');
+                } else{
+                    res.send(403).send('Username/password is invalid');
+                }
+                
+            }
+        }
+    });
+});
+
 app.get('/test-db', function(req, res){
     //make a select request
     //return a response with the results
