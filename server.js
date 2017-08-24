@@ -7,6 +7,8 @@ app.use(morgan('combined'));
 
 var Pool = require('pg').Pool;
 
+var crypto = require('crypto');
+
 var config = {
   user: 'samsridharmac',
   database: 'samsridharmac',
@@ -56,6 +58,16 @@ function createTemplate (data){
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+});
+
+function hash(input, salt){
+    //How do we create hash
+  var hashed = crypto.pbkdf2Sync(input, salt, 10000, 512, 'sha512');
+  return hashed.toString('hex');
+}
+
+app.get('/hash/:input', function(req, res){
+    var hashedString = hash(req.params.input, 'this-is-some-random-string');
 });
 
 var pool = new Pool(config);
